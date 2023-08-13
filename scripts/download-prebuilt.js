@@ -14,6 +14,9 @@ function main(exit) {
   if (process.env.TARGET_ARCH) {
     args.push('--target_arch=' + process.env.TARGET_ARCH);
   }
+  if (process.env.TARGET_PLATFORM) {
+    args.push('--target_platform=' + process.env.TARGET_PLATFORM);
+  }
 
   let { status } = spawnSync('node-pre-gyp', args, {
     shell: true,

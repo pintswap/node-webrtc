@@ -7,6 +7,7 @@ set -e
 set -v
 
 WRTC_TMPDIR=$(dirname $0)/tmp
+rm -rf $WRTC_TMPDIR
 mkdir $WRTC_TMPDIR
 ln -s $(which python2.7) $WRTC_TMPDIR/python
 PATH=$WRTC_TMPDIR:$PATH
